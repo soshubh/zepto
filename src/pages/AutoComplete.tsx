@@ -5,7 +5,6 @@ interface Chip {
   id: number;
   label: string;
   icon: string;
-  gmail: string
 }
 
 const AutoCompleteChips: React.FC = () => {
@@ -17,13 +16,13 @@ const AutoCompleteChips: React.FC = () => {
   const listRef = useRef<HTMLUListElement | null>(null);
 
   const items: Chip[] = [
-    { id: 1, label: 'Nick Giannopoulos', icon: './icon.jpeg', gmail: 'temp1@gmail.com' },
-    { id: 2, label: 'John Doe', icon: './icon.jpeg' ,gmail: 'temp1@gmail.com'},
-    { id: 3, label: 'Jane Smith', icon: './icon.jpeg',gmail: 'temp1@gmail.com' },
-    { id: 4, label: 'Alice Johnson', icon: './icon.jpeg',gmail: 'temp1@gmail.com' },
-    { id: 5, label: 'shubh singh', icon: './icon.jpeg',gmail: 'temp1@gmail.com' },
-    { id: 6, label: 'shahsi', icon: './icon.jpeg',gmail: 'temp1@gmail.com' },
-    { id: 6, label: 'Priya', icon: './icon.jpeg',gmail: 'temp1@gmail.com' },
+    { id: 1, label: 'Nick Giannopoulos', icon: './icon.jpeg' },
+    { id: 2, label: 'John Doe', icon: './icon.jpeg' },
+    { id: 3, label: 'Jane Smith', icon: './icon.jpeg' },
+    { id: 4, label: 'Alice Johnson', icon: './icon.jpeg' },
+    { id: 5, label: 'shubh singh', icon: './icon.jpeg' },
+    { id: 6, label: 'shahsi', icon: './icon.jpeg' },
+    { id: 6, label: 'Priya', icon: './icon.jpeg' },
   ];
 
   useEffect(() => {
@@ -116,7 +115,6 @@ const AutoCompleteChips: React.FC = () => {
               <img src={item.icon} alt="Profile Icon"  className="w-7 rounded-full mr-3" />
               {item.label}
             </li>
-                       
           ))}
         </ul>
       )}
