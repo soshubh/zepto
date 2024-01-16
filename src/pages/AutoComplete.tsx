@@ -77,7 +77,8 @@ const AutoCompleteChips: React.FC = () => {
 
   const handleListClick = (event: React.MouseEvent<HTMLUListElement, MouseEvent>) => {
     if (event.target instanceof HTMLLIElement) {
-      const clickedItem = filteredItems.find((item) => item.label === event.target.innerText);
+     // const clickedItem = filteredItems.find((item) => item.label === event.target.innerText);
+      const clickedItem = filteredItems.find((item) => item.label === (event.target as HTMLLIElement).innerText);
       if (clickedItem) {
         handleItemClick(clickedItem);
       }
